@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import CreateMock from './pages/CreateMock.jsx';
-import Templates from './pages/Templates.jsx';
-import Preview from './pages/Preview.jsx';
-import './index.css';
+import Home from './pages/Home';
+import CreateMock from './pages/CreateMock';
+import Templates from './pages/Templates';
+import Preview from './pages/Preview';
+import './index.css'; // This now imports Tailwind CSS
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App min-h-screen bg-gray-50">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateMock />} />

@@ -33,7 +33,7 @@ const Home = () => {
             {['WhatsApp', 'Instagram', 'Twitter', 'iMessage', 'Facebook', 'Telegram'].map((platform) => (
               <div 
                 key={platform}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-200 text-center"
+                className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition duration-200 text-center"
               >
                 <h3 className="text-lg font-medium text-gray-800">{platform}</h3>
               </div>
