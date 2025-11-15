@@ -9,6 +9,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Import routes
+const projectRoutes = require('./routes/projects');
+const templateRoutes = require('./routes/templates');
+const messageRoutes = require('./routes/messages');
+const suggestionRoutes = require('./routes/suggestions');
+const authRoutes = require('./routes/auth');
+
+// Use routes
+app.use('/api/projects', projectRoutes);
+app.use('/api/templates', templateRoutes);
+app.use('/api/messages', messageRoutes);
+app.use('/api/suggestions', suggestionRoutes);
+app.use('/api/auth', authRoutes);
+
 // Basic route to test if server works
 app.get('/', (req, res) => {
   res.json({ message: 'Social Mock Generator API is running!' });
