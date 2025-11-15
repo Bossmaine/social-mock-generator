@@ -3,45 +3,39 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="container">
-      <div style={{ textAlign: 'center', padding: '50px 20px' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '20px', color: '#333' }}>
+    <div className="container mx-auto px-4">
+      <div className="text-center py-12 px-4">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">
           Social Mock Generator
         </h1>
-        <p style={{ fontSize: '1.2rem', marginBottom: '40px', color: '#666' }}>
+        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
           Create realistic-looking social media screenshots for WhatsApp, Instagram, Twitter, and more!
         </p>
         
-        <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link to="/create" className="btn btn-primary" style={{ textDecoration: 'none' }}>
+        <div className="flex gap-4 justify-center flex-wrap mb-16">
+          <Link 
+            to="/create" 
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200"
+          >
             Create New Mock
           </Link>
-          <Link to="/templates" className="btn" style={{ 
-            textDecoration: 'none', 
-            backgroundColor: '#6c757d', 
-            color: 'white' 
-          }}>
+          <Link 
+            to="/templates" 
+            className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200"
+          >
             Browse Templates
           </Link>
         </div>
 
-        <div style={{ marginTop: '50px' }}>
-          <h2>Popular Platforms</h2>
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-            gap: '20px', 
-            marginTop: '30px' 
-          }}>
-            {['WhatsApp', 'Instagram', 'Twitter', 'iMessage', 'Facebook', 'Telegram'].map(platform => (
-              <div key={platform} style={{
-                padding: '20px',
-                backgroundColor: 'white',
-                borderRadius: '10px',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                textAlign: 'center'
-              }}>
-                <h3>{platform}</h3>
+        <div className="mt-12">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Popular Platforms</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {['WhatsApp', 'Instagram', 'Twitter', 'iMessage', 'Facebook', 'Telegram'].map((platform) => (
+              <div 
+                key={platform}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-200 text-center"
+              >
+                <h3 className="text-lg font-medium text-gray-800">{platform}</h3>
               </div>
             ))}
           </div>
